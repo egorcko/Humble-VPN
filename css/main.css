@@ -95,15 +95,15 @@
 }
 
 .main {
-  background: url("../src/assets/images/app_desktop.png") no-repeat right top, url("../src/assets/images/main_bg.png") no-repeat left bottom, -webkit-gradient(linear, left top, left bottom, from(#eaeffa), color-stop(83.33%, #ffffff));
-  background: url("../src/assets/images/app_desktop.png") no-repeat right top, url("../src/assets/images/main_bg.png") no-repeat left bottom, linear-gradient(180deg, #eaeffa 0%, #ffffff 83.33%);
+  background: url("../src/assets/images/app_desktop.png") no-repeat right top 30px, url("../src/assets/images/main_bg.png") no-repeat left bottom, -webkit-gradient(linear, left top, left bottom, from(#eaeffa), color-stop(83.33%, #ffffff));
+  background: url("../src/assets/images/app_desktop.png") no-repeat right top 30px, url("../src/assets/images/main_bg.png") no-repeat left bottom, linear-gradient(180deg, #eaeffa 0%, #ffffff 83.33%);
   padding-top: 121px;
   position: relative;
 }
 
 .main__text-block {
   margin-top: 55px;
-  padding-bottom: 310px;
+  padding-bottom: 340px;
   max-width: 70%;
 }
 
