@@ -1,1 +1,17 @@
 @import "./variables/fonts";
+@import "./variables/colors";
+@import "./components/header";
+@import "./components/main-section";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  position: relative;
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}

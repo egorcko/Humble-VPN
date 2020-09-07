@@ -1,0 +1,43 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0;
+  }
+  &__logo {
+    position: absolute;
+    left: -65px;
+    top: calc(50% + 3px);
+    transform: translateY(-50%);
+  }
+  &__burger {
+    display: none;
+  }
+  &__nav {
+    ul {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+    }
+    &-item {
+      list-style: none;
+      & + & {
+        margin-left: 70px;
+      }
+      a {
+        color: $color-grey;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+}
