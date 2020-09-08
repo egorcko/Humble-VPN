@@ -13,30 +13,101 @@
   }
   &__logo {
     position: absolute;
-    left: -65px;
+    left: 0;
     top: calc(50% + 3px);
     transform: translateY(-50%);
   }
   &__burger {
     display: none;
+    outline: none;
+    @media (max-width: $tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: transparent;
+      padding: 0;
+      margin-left: auto;
+      z-index: 1;
+      span {
+        width: 18px;
+        height: 2px;
+        background-color: #000;
+        display: inline-block;
+        position: relative;
+        transition: transform 0.5s ease;
+        &.active {
+          transform: rotate(45deg);
+          &:before {
+            top: 0;
+          }
+          &:after {
+            transform: rotate(-90deg) translateX(5px);
+          }
+        }
+        &:before,
+        &:after {
+          position: absolute;
+          content: "";
+          width: inherit;
+          height: inherit;
+          background-color: inherit;
+          left: 0;
+          transition: transform 0.5s ease, top 0.5s ease;
+        }
+        &::before {
+          top: -5px;
+        }
+        &:after {
+          bottom: -5px;
+        }
+      }
+    }
   }
   &__nav {
+    @media (max-width: $tablet) {
+      display: none;
+      &.active {
+        display: block;
+        position: absolute;
+        background: #fff;
+        padding: 20px 40px 20px 30px;
+        right: -10px;
+        box-shadow: -2px 6px 14px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        top: 30px;
+      }
+    }
     ul {
       display: flex;
       padding: 0;
       margin: 0;
       align-items: center;
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
     &-item {
       list-style: none;
       & + & {
         margin-left: 70px;
+        @media (max-width: $tablet) {
+          margin-left: 0;
+          margin-top: 20px;
+        }
       }
       a {
         color: $color-grey;
         text-decoration: none;
         font-size: 18px;
         line-height: 25px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color 0.3s ease, color 0.3s ease;
+        &:hover {
+          border-bottom-color: $color-blue;
+          color: $color-blue;
+        }
       }
     }
   }
