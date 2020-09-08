@@ -183,7 +183,7 @@
 }
 
 .advantages {
-  background: url("../src/assets/images/advantages_bg_2.png") no-repeat left bottom/50%, url("../src/assets/images/advantages_bg.png") no-repeat left bottom/100%, #edf1fb;
+  background: url("../src/assets/images/advantages_bg_2.png") no-repeat left bottom/45%, url("../src/assets/images/advantages_bg.png") no-repeat left bottom/100%, #edf1fb;
 }
 
 .advantages__list {
@@ -250,6 +250,7 @@
 .advantages__text-block {
   width: calc(66% - 13px);
   margin-top: 52px;
+  margin-bottom: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -282,6 +283,50 @@
   color: #5a747c;
   margin: 50px 0 0;
   width: 50%;
+}
+
+.access {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.access__text-block, .access__image {
+  max-width: 50%;
+}
+
+.access__text-block {
+  margin-top: 45px;
+}
+
+.access__image {
+  margin-top: -100px;
+}
+
+.access__title {
+  font-size: 60px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.access__subtitle {
+  margin: 0;
+  font-size: 40px;
+  color: #255fd3;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.access__text {
+  margin-top: 43px;
+  color: #5a747c;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 55%;
 }
 
 html,

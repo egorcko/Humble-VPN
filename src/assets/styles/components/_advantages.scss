@@ -1,5 +1,5 @@
 .advantages {
-  background: url("../src/assets/images/advantages_bg_2.png") no-repeat left bottom / 50%,
+  background: url("../src/assets/images/advantages_bg_2.png") no-repeat left bottom / 45%,
     url("../src/assets/images/advantages_bg.png") no-repeat left bottom / 100%, #edf1fb;
   &__list {
     display: flex;
@@ -46,6 +46,7 @@
   &__text-block {
     width: calc(66% - 13px);
     margin-top: 52px;
+    margin-bottom: 140px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

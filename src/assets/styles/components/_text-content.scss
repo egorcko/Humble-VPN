@@ -1,0 +1,17 @@
+.text-content {
+  padding-bottom: 415px;
+  padding-top: 121px;
+  position: relative;
+  background: linear-gradient(180deg, #eaeffa 0%, #ffffff 83.33%);
+  &:after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    background: url("../src/assets/images/security_bg.png") no-repeat left bottom / 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+}

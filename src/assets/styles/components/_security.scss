@@ -1,0 +1,65 @@
+.security {
+  padding-bottom: 145px;
+  position: relative;
+  &:after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    background: url("../src/assets/images/security_bg.png") no-repeat left bottom / 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -60px;
+  }
+  &__image {
+    width: 120px;
+    height: 140px;
+  }
+  &__title {
+    margin-top: 35px;
+    margin-bottom: 0;
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  &__text {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 0;
+    line-height: 1.5;
+    max-width: 57%;
+    color: $color-grey;
+  }
+  &__button {
+    padding: 18px 27px 18px 29px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 40px;
+    background-color: $color-blue;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    &:hover {
+      box-shadow: 0 8px 18px $color-blue;
+    }
+    img {
+      margin-left: 15px;
+    }
+  }
+  &__bg {
+    margin-top: -80px;
+    z-index: -1;
+  }
+}

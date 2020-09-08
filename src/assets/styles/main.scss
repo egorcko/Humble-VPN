@@ -3,12 +3,19 @@
 @import "./components/header";
 @import "./components/main-section";
 @import "./components/advantages";
+@import "./components/access";
+@import "./components/security";
+@import "./components/footer";
+@import "./components/text-content";
 
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
+}
+body {
+  position: relative;
 }
 .container {
   position: relative;
