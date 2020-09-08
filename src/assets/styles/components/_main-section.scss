@@ -1,6 +1,7 @@
 .main {
-  background: url("../src/assets/images/app_desktop.png") no-repeat right top 30px,
-    url("../src/assets/images/main_bg.png") no-repeat left bottom, linear-gradient(180deg, #eaeffa 0%, #ffffff 83.33%);
+  background: url("../src/assets/images/app_desktop.png") no-repeat right top 50% / 45%,
+    url("../src/assets/images/main_bg.png") no-repeat left bottom / 100%,
+    linear-gradient(180deg, #eaeffa 0%, #ffffff 83.33%);
   padding-top: 121px;
   position: relative;
 
