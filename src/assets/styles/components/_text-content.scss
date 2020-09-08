@@ -14,4 +14,47 @@
     z-index: 2;
     pointer-events: none;
   }
+
+  &__title {
+    margin: 30px 0 0;
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  h2 {
+    color: $color-blue;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  b {
+    color: $color-blue;
+  }
+
+  a {
+    color: $color-blue;
+    text-decoration: none;
+    transition: border-bottom-color 0.3s ease;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-bottom-color: $color-blue;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    li {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: -23px;
+        background-color: $color-blue;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+    }
+  }
 }
