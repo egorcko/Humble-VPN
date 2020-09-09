@@ -1,6 +1,12 @@
 .security {
   padding-bottom: 145px;
   position: relative;
+  @media (max-width: $tablet) {
+    padding-bottom: 335px;
+  }
+  @media (max-width: $mobile) {
+    padding-bottom: 285px;
+  }
   &:after {
     position: absolute;
     bottom: 0;
@@ -11,22 +17,39 @@
     background: url("../src/assets/images/security_bg.png") no-repeat left bottom / 100%;
     z-index: 2;
     pointer-events: none;
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: -60px;
+    @media (max-width: $tablet) {
+      margin-top: -30px;
+    }
   }
   &__image {
     width: 120px;
     height: 140px;
+    @media (max-width: $tablet) {
+      width: 90px;
+      height: 110px;
+    }
   }
   &__title {
     margin-top: 35px;
     margin-bottom: 0;
     font-size: 60px;
     line-height: 1.2;
+    @media (max-width: $tablet) {
+      font-size: 50px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 27px;
+      text-align: center;
+    }
   }
   &__text {
     margin-top: 50px;
@@ -36,6 +59,10 @@
     line-height: 1.5;
     max-width: 57%;
     color: $color-grey;
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      margin-top: 30px;
+    }
   }
   &__button {
     padding: 18px 27px 18px 29px;
@@ -56,6 +83,9 @@
     }
     img {
       margin-left: 15px;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 60px;
     }
   }
   &__bg {

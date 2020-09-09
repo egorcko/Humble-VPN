@@ -13,12 +13,22 @@
     background: url("../src/assets/images/security_bg.png") no-repeat left bottom / 100%;
     z-index: 2;
     pointer-events: none;
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__title {
     margin: 30px 0 0;
     font-size: 60px;
     line-height: 1.2;
+    @media (max-width: $tablet) {
+      font-size: 50px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 32px;
+      margin-top: 0;
+    }
   }
   h2 {
     color: $color-blue;
