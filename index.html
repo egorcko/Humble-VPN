@@ -16,7 +16,7 @@
           <div class="header__logo">
             <img src="./src/assets/images/logo.png" alt="" />
           </div>
-          <button type="button" class="header__burger">
+          <button type="button" class="header__burger js-menu">
             <span></span>
           </button>
           <nav class="header__nav">
@@ -39,7 +39,11 @@
             so no one can&nbsp;see what&nbsp;you’re doing. Become anonymous in
             seconds.
           </p>
-          <img src="" alt="" class="main__image" />
+          <img
+            src="/src/assets/images/app_desktop.png"
+            alt=""
+            class="main__image"
+          />
           <div class="main__buttons">
             <a href="" class="main__button">Get Started</a>
             <ul class="main__platforms">
@@ -111,10 +115,12 @@
               alt="Accelerate your VPN"
               class="advantages__item-image"
             />
-            <h4 class="advantages__item-title">Accelerate your VPN</h4>
-            <p class="advantages__item-text">
-              You are completely assured to get maximum speed all the time
-            </p>
+            <div class="advantages__item-right">
+              <h4 class="advantages__item-title">Accelerate your VPN</h4>
+              <p class="advantages__item-text">
+                You are completely assured to get maximum speed all the time
+              </p>
+            </div>
           </div>
           <div class="advantages__item">
             <img
@@ -122,11 +128,13 @@
               alt="Be anywhere"
               class="advantages__item-image"
             />
-            <h4 class="advantages__item-title">Be anywhere</h4>
-            <p class="advantages__item-text">
-              Humble VPN has servers in 100+ countries to connect you to your
-              favorite content
-            </p>
+            <div class="advantages__item-right">
+              <h4 class="advantages__item-title">Be anywhere</h4>
+              <p class="advantages__item-text">
+                Humble VPN has servers in 100+ countries to connect you to your
+                favorite content
+              </p>
+            </div>
           </div>
           <div class="advantages__item">
             <img
@@ -134,11 +142,13 @@
               alt="Streaming"
               class="advantages__item-image"
             />
-            <h4 class="advantages__item-title">Streaming</h4>
-            <p class="advantages__item-text">
-              Our cutting-edge servers deliver optimum speed that lets you
-              stream instantly seamlessly
-            </p>
+            <div class="advantages__item-right">
+              <h4 class="advantages__item-title">Streaming</h4>
+              <p class="advantages__item-text">
+                Our cutting-edge servers deliver optimum speed that lets you
+                stream instantly seamlessly
+              </p>
+            </div>
           </div>
           <div class="advantages__item">
             <img
@@ -146,10 +156,12 @@
               alt="Be hidden from anybody"
               class="advantages__item-image"
             />
-            <h4 class="advantages__item-title">Be hidden from anybody</h4>
-            <p class="advantages__item-text">
-              Shield your Browsing from Hackers on public Wi-Fi
-            </p>
+            <div class="advantages__item-right">
+              <h4 class="advantages__item-title">Be hidden from anybody</h4>
+              <p class="advantages__item-text">
+                Shield your Browsing from Hackers on public Wi-Fi
+              </p>
+            </div>
           </div>
           <div class="advantages__item">
             <img
@@ -157,12 +169,14 @@
               alt="Encrypt everything"
               class="advantages__item-image"
             />
-            <h4 class="advantages__item-title">Encrypt everything</h4>
-            <p class="advantages__item-text">
-              All the data you send and receive online travels through an
-              encrypted tunnel. This way no one can get their hands on your
-              private information.
-            </p>
+            <div class="advantages__item-right">
+              <h4 class="advantages__item-title">Encrypt everything</h4>
+              <p class="advantages__item-text">
+                All the data you send and receive online travels through an
+                encrypted tunnel. This way no one can get their hands on your
+                private information.
+              </p>
+            </div>
           </div>
           <div class="advantages__text-block">
             <h2 class="advantages__title">Your Online Activity</h2>
@@ -244,5 +258,19 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      var menu = document.querySelector('.header__nav');
+      document.querySelector('.js-menu').addEventListener('click', function(e) {
+        if (e.target.classList.contains('active')) {
+          e.target.classList.remove('active');
+          menu.classList.remove('active');
+        }
+        else {
+          e.target.classList.add('active');
+          menu.classList.add('active');
+        }
+      });
+    </script>
   </body>
 </html>

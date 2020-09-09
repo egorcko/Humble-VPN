@@ -4,17 +4,35 @@
     linear-gradient(180deg, #eaeffa 0%, #ffffff 83.33%);
   padding-top: 121px;
   position: relative;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    background: linear-gradient(180deg, #eaeffa 0%, #ffffff 83.33%);
+    padding-top: 98px;
+    overflow: hidden;
+  }
 
   &__text-block {
     margin-top: 55px;
     padding-bottom: 340px;
     max-width: 70%;
+    @media (max-width: $tablet) {
+      max-width: 100%;
+      margin-top: 0;
+      padding-bottom: 60px;
+    }
   }
 
   &__title {
     font-size: 80px;
     line-height: 1.2;
     margin: 0;
+    @media (max-width: $tablet) {
+      font-size: 60px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 32px;
+    }
   }
   &__subtitle {
     color: $color-blue;
@@ -22,6 +40,13 @@
     font-size: 61px;
     font-weight: 600;
     line-height: 1.2;
+    @media (max-width: $tablet) {
+      font-size: 45px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 23px;
+      font-weight: 500;
+    }
   }
   &__text {
     margin: 43px 0 0;
@@ -29,10 +54,43 @@
     color: $color-grey;
     font-size: 18px;
     line-height: 1.5;
+    @media (max-width: $tablet) {
+      max-width: 80%;
+    }
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      font-size: 14px;
+      margin-top: 25px;
+    }
   }
+
+  &__image {
+    display: none;
+    @media (max-width: $tablet) {
+      display: block;
+      max-width: 80%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    @media (max-width: $mobile) {
+      max-width: 110%;
+    }
+  }
+
   &__buttons {
     display: flex;
     align-items: center;
+    margin-top: 40px;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      position: relative;
+      margin-top: 460px;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 320px;
+    }
   }
   &__button {
     background-color: $color-blue;
@@ -54,6 +112,10 @@
     list-style: none;
     padding: 0;
     margin: 0 0 0 28px;
+    @media (max-width: $tablet) {
+      margin-left: 0;
+      margin-top: 18px;
+    }
     &-item {
       & + & {
         margin-left: 30px;

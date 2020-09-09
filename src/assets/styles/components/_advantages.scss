@@ -1,11 +1,22 @@
 .advantages {
   background: url("../src/assets/images/advantages_bg_2.png") no-repeat left bottom / 45%,
     url("../src/assets/images/advantages_bg.png") no-repeat left bottom / 100%, #edf1fb;
+
+  @media (max-width: $tablet) {
+    background: url("../src/assets/images/advantages_bg_2.png") no-repeat left bottom / 50%, #edf1fb;
+  }
+  @media (max-width: $mobile) {
+    background: url("../src/assets/images/advantages_bg_2.png") no-repeat left bottom / 110%, #edf1fb;
+  }
   &__list {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
     margin-top: -60px;
+    @media (max-width: $tablet) {
+      margin-top: 0;
+      justify-content: center;
+    }
   }
   &__item {
     width: calc(33% - 30px);
@@ -42,6 +53,34 @@
         background-color: $color-blue;
       }
     }
+    @media (max-width: $tablet) {
+      width: 50%;
+      flex-direction: row;
+      & + & {
+        margin-left: 0;
+      }
+      &-image {
+        margin-top: -10px;
+        height: auto;
+        width: 90px;
+      }
+      &-right {
+        margin-left: 25px;
+      }
+      &-title {
+        font-size: 19px;
+        margin: 0;
+      }
+      &-text {
+        font-size: 15px;
+      }
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+      &-text {
+        max-width: 100%;
+      }
+    }
   }
   &__text-block {
     width: calc(66% - 13px);
@@ -50,11 +89,30 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @media (max-width: $tablet) {
+      width: 100%;
+      margin-top: 60px;
+      margin-bottom: 350px;
+      align-items: center;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 30px;
+      align-items: flex-start;
+      margin-bottom: 370px;
+    }
   }
   &__title {
     font-size: 60px;
     line-height: 1.2;
     margin: 0;
+    @media (max-width: $tablet) {
+      font-size: 60px;
+      text-align: center;
+    }
+    @media (max-width: $mobile) {
+      font-size: 32px;
+      text-align: left;
+    }
   }
   &__subtitle {
     color: $color-blue;
@@ -62,6 +120,15 @@
     font-weight: 600;
     line-height: 1.2;
     margin: 0;
+    @media (max-width: $tablet) {
+      font-size: 45px;
+      text-align: center;
+    }
+    @media (max-width: $mobile) {
+      font-size: 28px;
+      font-weight: 500;
+      text-align: left;
+    }
   }
   &__text {
     font-size: 18px;
@@ -69,5 +136,15 @@
     color: $color-grey;
     margin: 50px 0 0;
     width: 50%;
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      text-align: center;
+      margin-top: 30px;
+      width: 80%;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+      text-align: left;
+    }
   }
 }
